@@ -29,4 +29,5 @@ Rscript process_df.R $SLURM_ARRAY_TASK_ID
 ```
 Then use those different numbers to subset out your data for processing.
 You can also use the array ID to separate out or subset in other ways. `03_iris_example.cmd` does just that,
-using a simple set of if statements to subset a data frame a process a selected portion.
+using a simple set of if statements to subset a data frame and process a selected portion.
+
