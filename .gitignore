@@ -1,3 +1,6 @@
+# slurm outputs
+.out
+
 # History files
 .Rhistory
 .Rapp.history
