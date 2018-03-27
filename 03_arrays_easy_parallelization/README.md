@@ -20,7 +20,7 @@ computationally complex in a non-trivial example.
 
 If you requested a SLURM allocation of 5 array jobs as follows (`--array=1,100,200,300,400`)
 , you could then count on getting the
-arguments 1,100,200,300,400 in your slurm script as an evironment variable:
+arguments 1,100,200,300,400 in your slurm script as an environment variable:
 
 In your SLURM script:
 
