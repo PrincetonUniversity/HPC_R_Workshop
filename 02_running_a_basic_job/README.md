@@ -38,7 +38,7 @@ by entering `scontrol show jobid 0000000` where `000000` is the job number you j
 This job will be so short you'll probably not be able to run these.
 
 Output from stdout (i.e. any print statements) will be by default written to a file labeled
-`slurm-XXXXXXX.out` in the current working directoy from which you call sbatch. You can pick
+`slurm-XXXXXXX.out` in the current working directory from which you call sbatch. You can pick
 a different location with the `#SBATCH --output=myfilename.out` parameter.
 
 Other files you write (i.e. a pickled .RData or .csv of results) will output based on the working
