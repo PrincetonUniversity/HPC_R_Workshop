@@ -35,7 +35,7 @@ sets an environment variable R needs to find the OpenMPI you just loaded.
 Then invoke R and run:
 
 ```R
-install.packages(c("Rmpi", "doMPI", dependencies = TRUE)
+install.packages(c("Rmpi", "doMPI", dependencies = TRUE))
 ```
 
 You'll then need to pick an R mirror. If you are having issues with this,
