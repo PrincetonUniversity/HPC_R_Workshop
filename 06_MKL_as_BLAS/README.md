@@ -9,12 +9,12 @@ The cluster install does not allow for this. (Otherwise
 swapping BLASes would turn into a compatibility nightmare.)
 Instead what you will need to do is take advantage of the fact
 that R will load the first BLAS it finds, so you can happily use
-the LD_PRELOAD to get access to MKL's multirhreading version
-of the BLAS functions.
+the LD_PRELOAD to get access to the Intel Math Kernel Library's 
+multithreading version of the BLAS functions.
 
-This means that when you run a job without ANY other paralleliztion
+This means that when you run a job without ANY other parallelization
 allocating 2-4 cores (`#SBATCH -c 3`, for example) will yield 
-improvments on BLAS functions, especially matrix operations and 
+improvements on BLAS functions, especially matrix operations and 
 things like linear discriminant analysis.
 
 ## Examples
@@ -33,7 +33,7 @@ without, you can see that functions that can use a threading BLAS get
 much improved performance.
 
 The one caveat (and what makes this a sometimes solution), is that 
-efficiency drops of precipitiously beyond 2-4 cores, as the MKL can 
+efficiency drops off precipitously beyond 2-4 cores, as the MKL can 
 only sub in for so much. You should attempt some short tests of your 
 code if possible to determine the optimum core count that trades efficiency
 for the right number of cores, otherwise you'll waste more time in
