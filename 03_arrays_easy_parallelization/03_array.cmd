@@ -5,8 +5,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH -t 00:05:00
 #SBATCH --array=0-5
-# sends mail when process begins, and
-# when it ends. Make sure you define your email
 
+# The following line is the reservation for our course
+# which you should remove if you adapt these scripts
+#SBATCH --reservation=HPCR
 
 Rscript array.R
