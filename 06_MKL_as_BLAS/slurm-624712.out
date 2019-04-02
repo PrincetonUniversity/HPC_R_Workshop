@@ -1,0 +1,20 @@
+[1] "Matrix multiply:"
+   user  system elapsed 
+  3.220   0.068   2.057 
+[1] "----"
+[1] "Cholesky Factorization:"
+   user  system elapsed 
+  0.619   0.048   0.467 
+[1] "----"
+[1] "Singular Value Decomposition:"
+   user  system elapsed 
+  4.313   0.107   2.428 
+[1] "----"
+[1] "Principal Components Analysis:"
+   user  system elapsed 
+  9.162   0.271   5.145 
+[1] "----"
+[1] "Linear Discriminant Analysis:"
+   user  system elapsed 
+ 22.526   0.507  19.723 
+[1] "----"

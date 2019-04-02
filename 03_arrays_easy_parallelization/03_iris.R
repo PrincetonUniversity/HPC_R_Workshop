@@ -14,5 +14,5 @@ if (start_index == '2') {
 
 if (start_index == '3') {
   print('Virginica averages:')
-  print(apply(iris[iris$Species=='versicolor',1:4], 2, mean))
+  print(apply(iris[iris$Species=='virginica',1:4], 2, mean))
 }

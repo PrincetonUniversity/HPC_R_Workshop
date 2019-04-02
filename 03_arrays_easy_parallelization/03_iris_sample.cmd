@@ -6,9 +6,8 @@
 #SBATCH -t 00:05:00
 #SBATCH --array=1-3
 
-# The following line is the reservation for our course
-# which you should remove if you adapt these scripts
-#SBATCH --reservation=HPCR
-
+# This uses the class reservation and will only work for our 
+# class today, in the future, remove this from your SBATCH
+# SBATCH -p class
 
 Rscript 03_iris.R $SLURM_ARRAY_TASK_ID 

@@ -14,8 +14,8 @@
 # Edit this line to get an email when the job begins and ends! 
 #SBATCH --mail-user=yourNetID@princeton.edu
 
-# The following line is the reservation for our course
-# which you should remove if you adapt these scripts
-#SBATCH --reservation=HPCR
+# This uses the class reservation and will only work for our 
+# class today, in the future, remove this from your SBATCH
+# SBATCH -p class
 
 Rscript Hello.R

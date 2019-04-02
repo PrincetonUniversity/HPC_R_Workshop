@@ -13,6 +13,10 @@
 # you in wherever it has room. Note though there is not a shared pool of 
 # memory bridging the nodes. 
 
+# This uses the class reservation and will only work for our 
+# class today, in the future, remove this from your SBATCH
+# SBATCH -p class
+
 
 module load openmpi/gcc/2.1.0/64 
 

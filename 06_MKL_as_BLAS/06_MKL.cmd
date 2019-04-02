@@ -4,10 +4,12 @@
 #SBATCH -c 2 
 #SBATCH -t 05:00
 
-# The following line is the reservation for our course
-# which you should remove if you adapt these scripts
-#SBATCH --reservation=HPCR
+# This uses the class reservation and will only work for our 
+# class today, in the future, remove this from your SBATCH
+# SBATCH -p class
 
+# This sets the intel-mkl to use the GNU interface, which 
+# is more compatible with R
 export  MKL_INTERFACE_LAYER=GNU,LP64
 export  MKL_THREADING_LAYER=GNU
 

@@ -5,9 +5,10 @@
 #SBATCH --mem=100G
 #SBATCH -t 00:05:00
 
-# The following line is the reservation for our course
-# which you should remove if you adapt these scripts
-#SBATCH --reservation=HPCR
+# This uses the class reservation and will only work for our 
+# class today, in the future, remove this from your SBATCH
+# SBATCH -p class
+
 
 module load openmpi/gcc/2.1.0/64 
 

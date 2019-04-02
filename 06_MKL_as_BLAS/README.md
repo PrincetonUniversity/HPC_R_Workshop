@@ -17,6 +17,9 @@ allocating 2-4 cores (`#SBATCH -c 3`, for example) will yield
 improvements on BLAS functions, especially matrix operations and 
 things like linear discriminant analysis.
 
+It is not always as extreme as you might think, because our R 
+is compiled with OpenBLAS, which has the similar fucntionality.
+
 ## Examples
 
 There are two examples in this folder that both run `test.R`, which
@@ -28,10 +31,8 @@ You can see the basic setup, which loads the module for intel-mkl and
 then preloads the approprate linked library when invoking Rscript.
 
 That's it. If you run the two scripts, you will get improved performance.
-They are fairly short, but at roughly 30 seconds with MKL to 50 seconds
-without, you can see that functions that can use a threading BLAS get
-much improved performance.
-
+They are fairly short, but you can see that functions that can use a threading BLAS get much improved performance.
+  
 The one caveat (and what makes this a sometimes solution), is that 
 efficiency drops off precipitously beyond 2-4 cores, as the MKL can 
 only sub in for so much. You should attempt some short tests of your 
