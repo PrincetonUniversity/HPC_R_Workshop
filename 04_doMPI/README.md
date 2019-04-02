@@ -31,7 +31,7 @@ export MPI_ROOT=/usr/local/openmpi/2.1.0/gcc/x86_64
 This adds the OpenMPI headers, and 
 sets an environment variable R needs to find the OpenMPI you just loaded.
 
-We also need to avoid a pitfall where Rmpi tries to run an MPI process on the hehead node, which caues issues, so we will be installing Rmpi via source.
+We also need to avoid a pitfall where Rmpi tries to run an MPI process on the head node, which cause issues, so we will be installing Rmpi via source.
 
 ```shell
 wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz
