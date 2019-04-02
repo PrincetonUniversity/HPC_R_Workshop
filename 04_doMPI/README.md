@@ -24,26 +24,23 @@ and 2) configure your environment to point to the server's OpenMPI install.
 Before invoking R to use `install.packages`, first do the following on the head node:
 
 ```shell
-module load rh/devtoolset/6
 module load openmpi/gcc/2.1.0/64
 export MPI_ROOT=/usr/local/openmpi/2.1.0/gcc/x86_64
 ```
 
-This puts a more up to date GCC on your path, adds the OpenMPI headers, and 
+This adds the OpenMPI headers, and 
 sets an environment variable R needs to find the OpenMPI you just loaded.
 
-Then invoke R and run:
+We also need to avoid a pitfall where Rmpi tries to run an MPI process on the hehead node, which caues issues, so we will be installing Rmpi via source.
 
-```R
-install.packages(c("Rmpi", "doMPI", dependencies = TRUE))
+```shell
+wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz
+R CMD INSTALL --no-test-load Rmpi_0.6-9.tar.gz
 ```
 
-You'll then need to pick an R mirror. If you are having issues with this,
-and you've loaded the modules you want just run `install.R` on the head node
-and the install will happen automatically.
+Then you can `Rscript install.R` from the `04_doMPI` and the remaining packages
+will install.
 
-While you're at it `install.packages('HistData')` since we're using
-it in the next example.
 
 ## The example
 This example shows off `doMPI`'s extensiont to R's `foreach` function, which
