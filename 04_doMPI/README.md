@@ -1,10 +1,10 @@
 # Rmpi and doMPI
 
 ## Rmpi
-Rmpi is a powerful wrapper that allows R to make calls using the 
-MPI (Message Passing Interface), which is an API that lets 
+Rmpi is a powerful wrapper that allows R to make calls using the
+MPI (Message Passing Interface), which is an API that lets
 processes running on different processors (and even different nodes)
-communicate with one another. 
+communicate with one another.
 
 It has a few caveats (memory is not shared across nodes, for example) and
 copies of objects may take extra memory, but it can be very, very quick.
@@ -17,7 +17,7 @@ Many R wrappers exist to bridge this gap, and this example uses one:
 do MPI.
 
 ## Installing Rmpi and doMPI
-Getting Rmpi installed can be a minor but not severe challenge. Generally 
+Getting Rmpi installed can be a minor but not severe challenge. Generally
 you will need to do two things: 1) module load an updated compiler (as a suggestion)
 and 2) configure your environment to point to the server's OpenMPI install.
 
@@ -28,10 +28,11 @@ module load openmpi/gcc/2.1.0/64
 export MPI_ROOT=/usr/local/openmpi/2.1.0/gcc/x86_64
 ```
 
-This adds the OpenMPI headers, and 
+This adds the OpenMPI headers, and
 sets an environment variable R needs to find the OpenMPI you just loaded.
 
-We also need to avoid a pitfall where Rmpi tries to run an MPI process on the head node, which cause issues, so we will be installing Rmpi via source.
+We also need to avoid a pitfall where Rmpi tries to run an MPI process on the head node, which causes issues, so we will be installing Rmpi via source
+and the shell command line.
 
 ```shell
 wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz
@@ -48,5 +49,5 @@ can divide up a repeated function and avoids using costly `for` loops. By using
 `%dopar%` as our operator and invoking Rscript using `srun`, we ensure that the
 MPI processes and the allocated nodes/cores are available to `Rmpi`.
 
-Take a look a the SLURM script for more details on how to allocate, and the 
+Take a look a the SLURM script for more details on how to allocate, and the
 `04_doMPI.R` script for an explanation of how it works, then try running it.
