@@ -1,16 +1,15 @@
 #!/bin/bash
-#SBATCH -N 1 
-#SBATCH -c 3
-
-# This is how you request a GPU using the 'generic resource' flag.
-# The number is how many per node (up to 4), but again using the GPU
-# to buttress your BLAS you'll probably get no benefit beyond 1.
-#SBATCH --gres=gpu:1
-#SBATCH -t 00:05:00
+#SBATCH --job-name=R-nvblas      # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --gres=gpu:tesla_v100:1  # number of gpus per node
+#SBATCH --mem=1G                 # total memory (RAM) per node
+#SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
+#SBATCH -p gpuworkshop           # REMOVE THIS LINE AFTER THE WORKSHOP
 
 # Load the CUDA toolkit and libraries
-module load cudatoolkit
-
+module load cudatoolkit/9.2
 
 # Standard MKL configuration for R and OpenMP threading
 module load intel-mkl
