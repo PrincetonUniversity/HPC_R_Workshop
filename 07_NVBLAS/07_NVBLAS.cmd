@@ -6,7 +6,7 @@
 #SBATCH --gres=gpu:tesla_v100:1  # number of gpus per node
 #SBATCH --mem=1G                 # total memory (RAM) per node
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
-#SBATCH -p gpuworkshop           # REMOVE THIS LINE AFTER THE WORKSHOP
+#SBATCH -p introgpu              # REMOVE THIS LINE AFTER THE WORKSHOP
 
 # Load the CUDA toolkit and libraries
 module load cudatoolkit/9.2
