@@ -1,7 +1,12 @@
 #!/bin/bash
-#SBATCH -N 2
-#SBATCH -n 4 
-#SBATCH -t 00:05:00
+#SBATCH --job-name=R-mpi         # create a short name for your job
+#SBATCH --nodes=2                # node count
+#SBATCH --ntasks=4               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=all          # send email on start, end and fault
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 # This is a somewhat inane setup, as it specifies 
 # two nodes and four processes between them. But it 
@@ -9,20 +14,13 @@
 # of nodes.
 
 # If your processes are memory light, you can just specify
-# -n for total number of tasks, and the scheduler will slot
+# -ntasks for total number of tasks, and the scheduler will slot
 # you in wherever it has room. Note though there is not a shared pool of 
-# memory bridging the nodes. 
+# memory bridging the nodes.
 
-# This uses the class reservation and will only work for our 
-# class today, in the future, remove this from your SBATCH
-# SBATCH -p class
-
-
-module load openmpi/gcc/2.1.0/64 
-
+module load openmpi/gcc/2.1.0/64
 
 # srun passes parameters that Rmpi uses to see the processes that 
 # have been started for it.
-# You can also use mpirun -np 1 and spawn processes manually yourself
-# but that interface can be more difficult to work with.
+
 srun Rscript 04_doMPI.R
