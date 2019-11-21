@@ -1,21 +1,11 @@
 #!/bin/bash
-# serial job using 1 node and 1 processor,
-# and runs for 1 minute (max).
-# The script passes a series of parameters to sbatch 
-# as if on the commandline, all marked by SBATCH.
+#SBATCH --job-name=R-serial      # create a short name for your job
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G is default)
+#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=all          # send email on start, end and fault
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
-#SBATCH -N 1   # node count
-#SBATCH --ntasks-per-node=1  # task count
-#SBATCH -t 00:01:00
-# sends mail when process begins, and
-# when it ends. Make sure you define your email
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-# Edit this line to get an email when the job begins and ends! 
-#SBATCH --mail-user=yourNetID@princeton.edu
-
-# This uses the class reservation and will only work for our 
-# class today, in the future, remove this from your SBATCH
-# SBATCH -p class
-
-Rscript Hello.R
+srun Rscript Hello.R
