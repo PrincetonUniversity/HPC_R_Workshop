@@ -4,9 +4,10 @@
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --gres=gpu:tesla_v100:1  # number of gpus per node
-#SBATCH --mem=1G                 # total memory (RAM) per node
+#SBATCH --mem=1G                 # total memory (RAM) per node (4G per cpu-core is default)
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
-#SBATCH -p introgpu              # REMOVE THIS LINE AFTER THE WORKSHOP
+#SBATCH --mail-type=all          # send email on job start, end and fault
+#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 # Load the CUDA toolkit and libraries
 module load cudatoolkit/9.2
