@@ -1,4 +1,4 @@
-# HPC R Workshop
+# Using R on the Princeton HPC Clusters
 
 ## About this repo
 This repository contains examples of how to use R on the Princeton HPC
