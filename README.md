@@ -10,9 +10,9 @@ one might parallelize code. Each folder has notations in markdown so that
 this can easily be viewed from a website or from a clone repository on
 the cluster.
 
-## R at Princeton
+## Getting Started
 
-Getting started with R at Princeton: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
+Research Computing offers this guide: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
 
 ## Authorship
 
