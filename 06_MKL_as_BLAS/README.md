@@ -20,7 +20,7 @@ things like linear discriminant analysis.
 It is not always as extreme as you might think, because our R 
 is compiled with OpenBLAS, which has the similar fucntionality. You can
 see the BLAS library used by R by running `sessionInfo()`. On the clusters
-this reveals:
+we find:
 
 ```
 BLAS/LAPACK: /usr/lib64/R/lib/libRblas.so
