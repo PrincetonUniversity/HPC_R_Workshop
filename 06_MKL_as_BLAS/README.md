@@ -23,7 +23,7 @@ is compiled with OpenBLAS, which has the similar fucntionality.
 ## Examples
 
 There are two examples in this folder that both run `test.R`, which
-is adapted from a benchmark written by the folks at Microsft Open R
+is adapted from a benchmark written by the folks at Microsoft Open R
 (which uses MKL by default and is available for install on your 
 home machines). 
 
