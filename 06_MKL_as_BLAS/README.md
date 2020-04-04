@@ -13,7 +13,7 @@ the LD_PRELOAD to get access to the Intel Math Kernel Library's
 multithreading version of the BLAS functions.
 
 This means that when you run a job without ANY other parallelization
-allocating 2-4 cores (`#SBATCH -c 3`, for example) will yield 
+allocating 2-4 cores (`#SBATCH --cpus-per-task=3`, for example) will yield 
 improvements on BLAS functions, especially matrix operations and 
 things like linear discriminant analysis.
 
