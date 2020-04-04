@@ -18,7 +18,12 @@ improvements on BLAS functions, especially matrix operations and
 things like linear discriminant analysis.
 
 It is not always as extreme as you might think, because our R 
-is compiled with OpenBLAS, which has the similar fucntionality.
+is compiled with OpenBLAS, which has the similar fucntionality. You can
+see the BLAS library used by R by running `sessionInfo()`:
+
+```
+BLAS/LAPACK: /usr/lib64/R/lib/libRblas.so
+```
 
 ## Examples
 
