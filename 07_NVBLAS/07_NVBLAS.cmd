@@ -25,4 +25,4 @@ CUDA_DIR=/usr/local/cuda-9.2
 
 # Preload the path to libnvblas.so, no need for the MKL preload
 # since nvblas.conf handles that for us.
-LD_PRELOAD="$CUDA_DIR/lib64/libnvblas.so" /usr/bin/Rscript test.R
+LD_PRELOAD="$CUDA_DIR/lib64/libnvblas.so" srun Rscript test.R
