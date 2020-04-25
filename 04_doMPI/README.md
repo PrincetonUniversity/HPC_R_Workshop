@@ -44,7 +44,7 @@ will install.
 
 
 ## The example
-This example shows off `doMPI`'s extensiont to R's `foreach` function, which
+This example shows off `doMPI`'s extension to R's `foreach` function, which
 can divide up a repeated function and avoids using costly `for` loops. By using
 `%dopar%` as our operator and invoking Rscript using `srun`, we ensure that the
 MPI processes and the allocated nodes/cores are available to `Rmpi`.
