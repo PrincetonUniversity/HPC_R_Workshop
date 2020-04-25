@@ -10,7 +10,7 @@ problematic with OpenMPI 2.0 so I do not recommend it).
 
 `parallel` works by forking process from the parent, so the SLURM script
 will look different. It will specify `--nodes=1` `--ntasks=1` (one node, one process)
-and `--cpus-per-task=5`, which says assign 5 CPU-cores to that process.
+and `--cpus-per-task=5`, which says assign five CPU-cores to that process.
 
 This can only run across one node, but it is very quick, very easy, and it 
 can accomodate parallelizing operations across large dataframes readily.
