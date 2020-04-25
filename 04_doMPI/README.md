@@ -24,7 +24,7 @@ and 2) configure your environment to point to the server's OpenMPI install.
 Before invoking R to use `install.packages`, first do the following on the head node:
 
 ```shell
-module load openmpi/gcc/2.1.0/64
+module load openmpi/gcc/2.1.0/64  # on della use openmpi/gcc/2.0.2/64
 export MPI_ROOT=/usr/local/openmpi/2.1.0/gcc/x86_64
 ```
 
