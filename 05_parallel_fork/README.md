@@ -12,18 +12,22 @@ problematic with OpenMPI 2.0 so I do not recommend it).
 will look different. It will specify `--nodes=1` `--ntasks=1` (one node, one process)
 and `--cpus-per-task=5`, which says assign five CPU-cores to that process.
 
-This can only run across one node, but it is very quick, very easy, and it 
+This can only run across one node, but it is very quick, very easy, and it
 can accomodate parallelizing operations across large dataframes readily.
+
+It can also run on a socket based setup, but this is mostly for compatibility with Windows-based parallelism not applicable to the cluster.
 
 ## The example
 
 This is an adaptation of a standard parallelize and reduce that has (admittedly)
 limited application. However, if you can use the apply family of functions, you
 can do the same with their parallel breathren. It also demonstrates the
-`--mem=50g` flag in the example script. The matrix we make is quite large, and 
-CPUs come with a default allocation (4 GB x 5) that isn't quite enough, so we 
+`--mem=50g` flag in the example script. The matrix we make is quite large, and
+CPUs come with a default allocation (4 GB x 5) that isn't quite enough, so we
 just ask for more.
 
 Since this task is isolated to one node and one shared parent, we can merrily
 just increase the memory up to the node max (though that will slow down how it takes
 the job to start as it waits for open resources).
+
+There is another example that uses `mclapply` to do the same thing at a higher level over a matrix (or dataframe).
