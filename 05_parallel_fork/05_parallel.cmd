@@ -8,6 +8,4 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-module load openmpi/gcc/2.1.0/64 
-
 srun Rscript 05_parallel.R
