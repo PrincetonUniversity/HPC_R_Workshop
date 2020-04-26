@@ -18,7 +18,7 @@
 # you in wherever it has room. Note though there is not a shared pool of 
 # memory bridging the nodes.
 
-module load openmpi/gcc/2.1.0/64  # on della use openmpi/gcc/2.0.2/64
+module load openmpi/gcc/3.1.5/64 
 
 # srun passes parameters that Rmpi uses to see the processes that 
 # have been started for it.
