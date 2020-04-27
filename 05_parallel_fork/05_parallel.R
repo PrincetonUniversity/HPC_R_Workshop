@@ -10,6 +10,6 @@ parallelAvg <- function(m, n) {
     print(mean(row.means))
 }
 
-parallelAvg(50000, 50000)
+parallelAvg(20000, 20000)
 
 stopCluster(cl)

@@ -24,24 +24,16 @@ and 2) configure your environment to point to the server's OpenMPI install.
 Before invoking R to use `install.packages`, first do the following on the head node:
 
 ```shell
-module load openmpi/gcc/2.1.0/64  # on della use openmpi/gcc/2.0.2/64
-export MPI_ROOT=/usr/local/openmpi/2.1.0/gcc/x86_64
-```
-
-This adds the OpenMPI headers, and
-sets an environment variable R needs to find the OpenMPI you just loaded.
-
-We also need to avoid a pitfall where Rmpi tries to run an MPI process on the head node, which causes issues, so we will be installing Rmpi via source
-and the shell command line.
-
-```shell
-wget https://cran.r-project.org/src/contrib/Rmpi_0.6-9.tar.gz
-R CMD INSTALL --no-test-load Rmpi_0.6-9.tar.gz
+module load openmpi/gcc/3.1.5/64
+export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
 ```
 
 Then you can `Rscript install.R` from the `04_doMPI` and the remaining packages
 will install.
 
+Note that you should take care to run SLURM scripts using the same version of openmpi
+that you used while compiling Rmpi. Equally note that versions available will vary slightly
+across the clusters.
 
 ## The example
 This example shows off `doMPI`'s extension to R's `foreach` function, which

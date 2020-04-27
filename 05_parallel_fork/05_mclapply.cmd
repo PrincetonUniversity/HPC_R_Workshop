@@ -8,4 +8,4 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
-srun Rscript 05_parallel.R
+srun Rscript 05_mclapply.R
