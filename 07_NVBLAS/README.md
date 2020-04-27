@@ -26,7 +26,7 @@ use.
 
 Just copy it to your home directory and you're good to go. No libraries to install
 or add. Note the commentary in the `.cmd` file for why things are set up as they
-happen to be. Note that the directory for the CPU BLAS (intel-mkl) in `nvblas.conf` must point to the module that you load. Likewise, you should point `CUDA_ROOT` in `nvidia.cmd` to the CUDA install that you have module loaded. You can find these by printing the `LD_LIBRARY_PATH` variable in the shell, i.e. `print $LD_LIBRARY_PATH`.
+happen to be. Note that the directory for the CPU BLAS (intel-mkl) in `nvblas.conf` must point to the module that you load.
 
 Here are the commands you need to run to launch the job:
 
