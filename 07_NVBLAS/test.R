@@ -28,8 +28,8 @@ system.time (S <- svd (A,nu=0,nv=0))
 print("----")
 
 # Principal Components Analysis
-m <- 10000
-n <- 2000
+m <- 5000
+n <- 1000
 A <- matrix (runif (m*n),m,n)
 print("Principal Components Analysis:")
 system.time (P <- prcomp(A))
