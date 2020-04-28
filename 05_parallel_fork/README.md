@@ -23,7 +23,7 @@ This is an adaptation of a standard parallelize and reduce that has (admittedly)
 limited application. However, if you can use the apply family of functions, you
 can do the same with their parallel breathren. It also demonstrates the
 `--mem=50g` flag in the example script. The matrix we make is quite large, and
-CPUs come with a default allocation (4 GB x 5) that isn't quite enough, so we
+CPUs come with a default allocation (4 GB x 4) that isn't quite enough, so we
 just ask for more.
 
 Since this task is isolated to one node and one shared parent, we can merrily
