@@ -10,7 +10,7 @@ problematic with OpenMPI 2.0 so I do not recommend it).
 
 `parallel` works by forking process from the parent, so the SLURM script
 will look different. It will specify `--nodes=1` `--ntasks=1` (one node, one process)
-and `--cpus-per-task=5`, which says assign five CPU-cores to that process.
+and `--cpus-per-task=4`, which says assign four CPU-cores to that process.
 
 This can only run across one node, but it is very quick, very easy, and it
 can accomodate parallelizing operations across large dataframes readily.
@@ -33,11 +33,5 @@ the job to start as it waits for open resources).
 There is another example that uses `mclapply` to do the same thing at a higher level over a matrix (or dataframe).
 
 There are also high-level frameworks that can take various backends using the `parallel` package a base. `doParallel` is a good example.
-
-If you are used to functional and futures programming, there is also the `furr` and `purr` packages that can use multicore processing to execute async and futures based R coding.
-
-If you are used to functional and futures programming, there is also the `furr` and `purr` packages that can use multicore processing to execute async and futures based R coding.
-
-If you are used to functional and futures programming, there is also the `furr` and `purr` packages that can use multicore processing to execute async and futures based R coding.
 
 If you are used to functional and futures programming, there is also the `furr` and `purr` packages that can use multicore processing to execute async and futures based R coding.
