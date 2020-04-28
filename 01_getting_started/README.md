@@ -63,7 +63,7 @@ invoke R to install packages.
 
 * **A very large package uses all of your quota.** The exact error this produces
 may vary but the easiest way to be sure that it might be a culprit is to run
-the custom `checkquotas` command. If your `/home/` quota is full, follow the
+the custom `checkquota` command. If your `/home/` quota is full, follow the
 link in the command to request some more space for the package install.
 
 * **R requires another library to compile the package.** This is a thorny problem.
