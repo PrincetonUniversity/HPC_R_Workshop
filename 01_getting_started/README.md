@@ -39,7 +39,7 @@ Choose an arbitrary package you might need. I like `data.table`. From the
 console enter
 
 ```R
-install.packages("data.table")
+> install.packages("data.table")
 ```
 
 You will then be prompted to set a directory to install packages in your 
