@@ -31,6 +31,12 @@ $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
 
+If you are using Rmpi on Della and you find that jobs hang then add this line to the end of your R script:
+
+```
+Rmpi::mpi.quit()
+```
+
 ### Adroit
 
 ```shell
