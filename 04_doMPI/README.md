@@ -23,9 +23,22 @@ and 2) configure your environment to point to the server's OpenMPI install.
 
 Before invoking R to use `install.packages`, first do the following on the head node:
 
+### Della
+
 ```shell
-module load openmpi/gcc/3.1.5/64
-export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
+$ module load rh/devtoolset/8 openmpi/gcc/2.0.2/64
+$ export MPI_ROOT=/usr/local/openmpi/2.0.2/gcc/x86_64
+$ R
+> install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
+```
+
+### Adroit
+
+```shell
+$ module load rh/devtoolset/8 openmpi/gcc/3.1.5/64
+$ export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
+$ R
+> install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
 
 Then you can `Rscript install.R` from the `04_doMPI` and the remaining packages
