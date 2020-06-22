@@ -44,3 +44,4 @@ head(df)
 # close the cluster to properly free up the MPI resources so SLURM
 # will declare the job 'done'.
 closeCluster(cl)
+Rmpi::mpi.quit()
