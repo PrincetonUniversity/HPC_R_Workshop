@@ -17,11 +17,10 @@ Many R wrappers exist to bridge this gap, and this example uses one:
 do MPI.
 
 ## Installing Rmpi and doMPI
+
 Getting Rmpi installed can be a minor but not severe challenge. Generally
 you will need to do two things: 1) module load an updated compiler (as a suggestion)
-and 2) configure your environment to point to the server's OpenMPI install.
-
-Before invoking R to use `install.packages`, first do the following on the head node:
+and 2) configure your environment to point to the server's OpenMPI install. Here is the installation procedure:
 
 ### Della
 
@@ -40,9 +39,6 @@ $ export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
-
-Then you can `Rscript install.R` from the `04_doMPI` and the remaining packages
-will install.
 
 Note that you should take care to run SLURM scripts using the same version of openmpi
 that you used while compiling Rmpi. Equally note that versions available will vary slightly
