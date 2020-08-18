@@ -34,4 +34,4 @@ There is another example that uses `mclapply` to do the same thing at a higher l
 
 There are also high-level frameworks that can take various backends using the `parallel` package a base. `doParallel` is a good example.
 
-If you are used to functional and futures programming, there is also the `furr` and `purr` packages that can use multicore processing to execute async and futures based R coding.
+If you are used to functional and futures programming, there is also the `furrr` and `purrr` packages that can use multicore processing to execute async and futures based R coding.
