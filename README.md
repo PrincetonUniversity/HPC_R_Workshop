@@ -10,6 +10,14 @@ one might parallelize code. Each folder has notations in markdown so that
 this can easily be viewed from a website or from a clone repository on
 the cluster.
 
+## Adroit Reservation
+
+Add the following line to your Slurm script for access to `adroit-11` or `adroit-h11g1` (V100 GPU node) during the workshop:
+
+```
+#SBATCH --reservation=hpcr      # REMOVE THIS LINE AFTER THE WORKSHOP
+```
+
 ## Getting Started
 
 Research Computing offers this guide: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
