@@ -7,6 +7,5 @@
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 #SBATCH --array=1-3              # job array with index values 1, 2, 3
 #SBATCH --mail-type=all          # send email on job start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 Rscript 03_iris.R $SLURM_ARRAY_TASK_ID

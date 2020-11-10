@@ -7,6 +7,5 @@
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 #SBATCH --array=0-5              # job array with index values 0, 1, 2, 3, 4, 5
 #SBATCH --mail-type=all          # send email on start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 Rscript array.R

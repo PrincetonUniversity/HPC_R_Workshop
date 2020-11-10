@@ -6,6 +6,5 @@
 #SBATCH --mem=4G                 # total memory per node (4G per cpu-core is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 Rscript Hello.R

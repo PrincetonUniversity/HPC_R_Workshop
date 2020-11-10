@@ -6,6 +6,5 @@
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
 
 srun Rscript 05_mclapply.R

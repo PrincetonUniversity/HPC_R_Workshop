@@ -6,7 +6,7 @@ your problem can use a more limited number of cores, it offers an easy
 that are part of the built-in `parallel` library, which builds on two
 older packages (`multicore` and `snow`). `snow` still exists and has
 MPI and sockets cluster implementations (though the former has been
-problematic with OpenMPI 2.0 so I do not recommend it).
+problematic with OpenMPI, so I do not recommend it).
 
 `parallel` works by forking process from the parent, so the SLURM script
 will look different. It will specify `--nodes=1` `--ntasks=1` (one node, one process)
@@ -23,7 +23,7 @@ This is an adaptation of a standard parallelize and reduce that has (admittedly)
 limited application. However, if you can use the apply family of functions, you
 can do the same with their parallel breathren. It also demonstrates the
 `--mem=50g` flag in the example script. The matrix we make is quite large, and
-CPUs come with a default allocation (4 GB x 4) that isn't quite enough, so we
+CPUs come with a default allocation that isn't quite enough, so we
 just ask for more.
 
 Since this task is isolated to one node and one shared parent, we can merrily

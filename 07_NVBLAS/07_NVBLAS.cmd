@@ -7,8 +7,8 @@
 #SBATCH --mem=4G                 # total memory per node (4G per cpu-core is default)
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
-#SBATCH --mail-user=<YourNetID>@princeton.edu
-#SBATCH --reservation=hpcr       # REMOVE THIS LINE AFTER THE WORKSHOP
+
+
 
 # Standard MKL configuration for R and OpenMP threading
 module load intel-mkl

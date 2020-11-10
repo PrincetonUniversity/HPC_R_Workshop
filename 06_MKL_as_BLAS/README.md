@@ -9,7 +9,7 @@ The cluster install does not allow for this. (Otherwise
 swapping BLASes would turn into a compatibility nightmare.)
 Instead what you will need to do is take advantage of the fact
 that R will load the first BLAS it finds, so you can happily use
-the LD_PRELOAD to get access to the Intel Math Kernel Library's
+LD_PRELOAD to get access to the Intel Math Kernel Library's
 multithreading version of the BLAS functions.
 
 This means that when you run a job without ANY other parallelization
@@ -18,7 +18,7 @@ improvements on BLAS functions, especially matrix operations and
 things like linear discriminant analysis.
 
 It is not always as extreme as you might think, because our R
-is compiled with OpenBLAS, which has the similar functionality. You can
+is compiled with OpenBLAS, which has similar functionality. You can
 see the BLAS library used by R by running `sessionInfo()`. On the clusters
 we find:
 
