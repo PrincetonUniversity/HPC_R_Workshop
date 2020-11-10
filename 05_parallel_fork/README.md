@@ -32,6 +32,6 @@ the job to start as it waits for open resources).
 
 There is another example that uses `mclapply` to do the same thing at a higher level over a matrix (or dataframe).
 
-There are also high-level frameworks that can take various backends using the `parallel` package a base. `doParallel` is a good example.
+There are also high-level frameworks that can take various backends using the `parallel` package a base. `doParallel` is a good example. See [this](https://github.com/PrincetonUniversity/intro_ml_libs/tree/master/R) machine learning example at Princeton.
 
 If you are used to functional and futures programming, there is also the `furrr` and `purrr` packages that can use multicore processing to execute async and futures based R coding.
