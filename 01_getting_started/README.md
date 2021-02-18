@@ -58,7 +58,7 @@ trouble for new users.
 * **The install requires a newer GCC** Enterprise Linux systems often have
 compilers that lag behind the state of the art to provide the stability 
 expected of them. There are modules that you can load from the commandline that
-will provide these. For gcc, simply use `module load rh/devtoolset` and then
+will provide these. For gcc, simply use `module load rh/devtoolset/8` and then
 invoke R to install packages. 
 
 * **A very large package uses all of your quota.** The exact error this produces
