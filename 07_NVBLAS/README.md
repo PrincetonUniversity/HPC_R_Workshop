@@ -18,7 +18,7 @@ It is worth noting that the NVBLAS is slower at non-matrix operations
 than Intel MKL, so this is also a sometimes fix.
 
 
-# Setup
+## Setup
 
 By default, the SLURM script for this example looks for a file called `nvblas.conf`
 located in your home directory. I have included a sample file with comments for your
