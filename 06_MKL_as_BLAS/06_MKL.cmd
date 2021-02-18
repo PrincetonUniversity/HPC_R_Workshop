@@ -12,5 +12,5 @@
 export  MKL_INTERFACE_LAYER=GNU,LP64
 export  MKL_THREADING_LAYER=GNU
 
-module load intel-mkl
+module load intel-mkl/2019.5/5/64
 LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so srun Rscript test.R
