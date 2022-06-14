@@ -25,8 +25,8 @@ and 2) configure your environment to point to the server's OpenMPI install. Here
 ### Della
 
 ```shell
-$ module load rh/devtoolset/8 openmpi/gcc/3.1.5/64
-$ export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
+$ module load openmpi/gcc/4.1.2
+$ export MPI_ROOT=/usr/local/openmpi/4.1.2/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
@@ -40,8 +40,8 @@ Rmpi::mpi.quit()
 ### Adroit
 
 ```shell
-$ module load rh/devtoolset/8 openmpi/gcc/3.1.5/64
-$ export MPI_ROOT=/usr/local/openmpi/3.1.5/gcc/x86_64
+$ module load openmpi/gcc/4.1.0
+$ export MPI_ROOT=/usr/local/openmpi/4.1.0/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
