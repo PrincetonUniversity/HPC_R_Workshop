@@ -33,6 +33,5 @@ Here are the commands you need to run to launch the job:
 ```
 $ cd HPC_R_Workshop/07_NVBLAS
 $ cp nvblas.conf ~
-# edit 07_NVBLAS.cmd to include your email address
 $ sbatch 07_NVBLAS.cmd
 ```
