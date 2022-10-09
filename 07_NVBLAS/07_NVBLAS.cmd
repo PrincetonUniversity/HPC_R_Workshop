@@ -3,7 +3,7 @@
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=3        # cpu-cores per task (>1 if multi-threaded tasks)
-#SBATCH --gres=gpu:tesla_v100:1  # number of gpus per node
+#SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --mem=4G                 # total memory per node (4G per cpu-core is default)
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
@@ -11,7 +11,7 @@
 
 
 # Standard MKL configuration for R and OpenMP threading
-module load intel-mkl
+module load intel-mkl/2021.1.1
 export MKL_INTERFACE_LAYER=GNU,LP64
 export MKL_THREADING_LAYER=GNU
 
