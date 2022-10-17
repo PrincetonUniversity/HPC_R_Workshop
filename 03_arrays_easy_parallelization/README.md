@@ -5,7 +5,7 @@ It also has the virtue of requiring no special libraries or packages
 to exploit.
 
 These are called array jobs, and that is the example that you see in `03_array.cmd`.
-Go ahead and look at it and the `array.R` sample
+Go ahead and look at it and the `array.R` sample.
 
 ## How to actually use these
 
