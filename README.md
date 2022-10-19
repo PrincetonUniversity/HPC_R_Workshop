@@ -19,6 +19,10 @@ Add the following line to your Slurm script for access to `adroit-11` or `adroit
 ```
 -->
 
+## Useful Links
+
+[ORNL Training Archive](https://docs.olcf.ornl.gov/training/training_archive.html) - See "Using R on HPC Clusters" from August 2022.
+
 ## Getting Started
 
 Research Computing offers this guide: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
