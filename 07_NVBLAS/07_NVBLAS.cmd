@@ -19,4 +19,4 @@ export NVBLAS_CONFIG_FILE=$HOME/nvblas.conf
 
 # Preload the path to libnvblas.so, no need for the MKL preload
 # since nvblas.conf handles that for us.
-LD_PRELOAD="/usr/lib64/libnvblas.so" srun Rscript test.R
+LD_PRELOAD="/usr/lib64/libnvblas.so" Rscript test.R
