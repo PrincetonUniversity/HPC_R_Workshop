@@ -8,8 +8,6 @@
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
-
-
 # Standard MKL configuration for R and OpenMP threading
 module load intel-mkl/2021.1.1
 export MKL_INTERFACE_LAYER=GNU,LP64
