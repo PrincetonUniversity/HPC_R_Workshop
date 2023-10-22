@@ -8,27 +8,35 @@ older packages (`multicore` and `snow`). `snow` still exists and has
 MPI and sockets cluster implementations (though the former has been
 problematic with OpenMPI, so I do not recommend it).
 
-`parallel` works by forking process from the parent, so the SLURM script
+`parallel` works by forking process from the parent, so the Slurm script
 will look different. It will specify `--nodes=1` `--ntasks=1` (one node, one process)
 and `--cpus-per-task=4`, which says assign four CPU-cores to that process.
 
 This can only run across one node, but it is very quick, very easy, and it
 can accomodate parallelizing operations across large dataframes readily.
 
-It can also run on a socket based setup, but this is mostly for compatibility with Windows-based parallelism not applicable to the cluster.
+It can also run on a socket based setup, but this is mostly for compatibility with Windows-based parallelism not applicable to the Research Computing clusters.
+
+```bash
+$ cd HPC_R_Workshop/05_parallel_fork
+$ cat 05_mclapply.R
+$ sbatch 05_mclapply.cmd
+```
+
+```bash
+$ cd HPC_R_Workshop/05_parallel_fork
+$ cat 05_parallel.R
+$ sbatch 05_parallel.cmd
+```
 
 ## The example
 
 This is an adaptation of a standard parallelize and reduce that has (admittedly)
 limited application. However, if you can use the apply family of functions, you
 can do the same with their parallel breathren. It also demonstrates the
-`--mem=50g` flag in the example script. The matrix we make is quite large, and
+`--mem=50G` flag in the example script. The matrix we make is quite large, and
 CPUs come with a default allocation that isn't quite enough, so we
 just ask for more.
-
-Since this task is isolated to one node and one shared parent, we can merrily
-just increase the memory up to the node max (though that will slow down how it takes
-the job to start as it waits for open resources).
 
 There is another example that uses `mclapply` to do the same thing at a higher level over a matrix (or dataframe).
 
