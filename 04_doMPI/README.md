@@ -21,7 +21,7 @@ doMPI.
 Getting Rmpi installed is somewhat harder than most R packages. Generally
 you will need to do two things: 1) load an MPI library module and 2) set an environment variable which specifies the base path of the MPI library. Here is the installation procedure:
 
-q#### Della
+#### Della
 
 ```shell
 $ module load openmpi/gcc/4.1.0
@@ -30,7 +30,7 @@ $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
 
-If you are using Rmpi on Della and you find that jobs hang then add this line to the end of your R script:
+If you are using Rmpi and you find that jobs hang then add this line to the end of your R script:
 
 ```
 Rmpi::mpi.quit()
