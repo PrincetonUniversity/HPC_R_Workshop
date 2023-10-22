@@ -17,12 +17,10 @@ For more, see [What is a Cluster?](https://researchcomputing.princeton.edu/faq/w
 
 Your computational jobs must be submitted using the scheduling software
 called Slurm (Simple Linux User Resource Management). It divides up the 
-computing nodes and their CPUs fairly and equitably.
-
-See our [Slurm knowledge base page](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) for more.
+computing nodes and their CPUs fairly and equitably. See our [Slurm knowledge base page](https://researchcomputing.princeton.edu/support/knowledge-base/slurm) for more.
 
 See a comprehensive guide on using the [Research Computing clusters](https://researchcomputing.princeton.edu/get-started/guide-princeton-clusters).
 
-### Installing Packages and accessing R
+### Installing Packages and Running R
 
 The details of installing R packages can be found on our [R and RStudio knowledge base page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
