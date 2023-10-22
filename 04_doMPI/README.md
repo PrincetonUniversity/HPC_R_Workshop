@@ -14,19 +14,18 @@ but that can be both tedious and requires a fair knowledge of how MPI
 works in the first place.
 
 Many R wrappers exist to bridge this gap, and this example uses one:
-do MPI.
+doMPI.
 
 ### Installing Rmpi and doMPI
 
-Getting Rmpi installed can be a minor but not severe challenge. Generally
-you will need to do two things: 1) module load an updated compiler (as a suggestion)
-and 2) configure your environment to point to the server's OpenMPI install. Here is the installation procedure:
+Getting Rmpi installed is somewhat harder than most R packages. Generally
+you will need to do two things: 1) load an MPI library module and 2) set an environment variable which specifies the base path of the MPI library. Here is the installation procedure:
 
-#### Della
+q#### Della
 
 ```shell
-$ module load openmpi/gcc/4.1.2
-$ export MPI_ROOT=/usr/local/openmpi/4.1.2/gcc
+$ module load openmpi/gcc/4.1.0
+$ export MPI_ROOT=/usr/local/openmpi/4.1.0/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
