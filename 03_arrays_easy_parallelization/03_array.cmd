@@ -8,4 +8,5 @@
 #SBATCH --array=0-5              # job array with index values 0, 1, 2, 3, 4, 5
 #SBATCH --mail-type=all          # send email on start, end and fail
 
+module purge
 Rscript array.R
