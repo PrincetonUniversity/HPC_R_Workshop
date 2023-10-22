@@ -1,32 +1,22 @@
-# Using R on the Princeton HPC Clusters
+# Using R on the Research Computing Clusters
 
-## About this repo
-This repository contains examples of how to use R on the Princeton HPC
-clusters, using the commonly accessible Adroit as an example.
+### About this repo
+
+This repository contains examples of how to use R on the Princeton Research Computing
+clusters. The material is written for the Adroit cluster but it can also be used on Della.
 
 The various examples cover how to access R on Princeton University's clusters,
-appropriate use of SLURM and scheduling, and some various examples of how
-one might parallelize code. Each folder has notations in markdown so that 
-this can easily be viewed from a website or from a clone repository on
-the cluster.
+appropriate use of Slurm and scheduling, and some examples of how
+one might parallelize code.
 
-<!--## Adroit Reservation
-
-Add the following line to your Slurm script for access to `adroit-11` or `adroit-h11g1` (V100 GPU node) during the workshop:
-
-```
-#SBATCH --reservation=hpcr      # REMOVE THIS LINE AFTER THE WORKSHOP
-```
--->
-
-## Useful Links
+### Useful Links
 
 [ORNL Training Archive](https://docs.olcf.ornl.gov/training/training_archive.html) - See "Using R on HPC Clusters" from August 2022.
 
-## Getting Started
+### Getting Started
 
-Research Computing offers this guide: [https://researchcomputing.princeton.edu/R](https://researchcomputing.princeton.edu/R)
+Research Computing offers this knowledge base page: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)
 
-## Authorship
+### Authorship
 
-Ths guide was created by Ben Hicks and Bill Guthe, with contributions and improvements by Jon Halverson.
+Ths guide was created by Ben Hicks and Bill Guthe with contributions by Jonathan Halverson.
