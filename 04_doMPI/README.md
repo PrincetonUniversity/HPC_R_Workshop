@@ -44,6 +44,35 @@ $ module load openmpi/gcc/4.1.0
 $ export MPI_ROOT=/usr/local/openmpi/4.1.0/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
+> q()
+```
+
+Next, submit the job:
+
+```bash
+$ cd HPC_R_Workshop/04_doMPI
+$ sbatch 04_doMPI_onAdroit.cmd
+```
+
+After the job runs, inspect the output:
+
+```
+$ cat slurm-*.out
+Loading required package: foreach
+Loading required package: foreach
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: iterators
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: iterators
+  parent child   result
+1   70.5  61.7 1.142626
+2   68.5  61.7 1.110211
+3   65.5  61.7 1.061588
+4   64.5  61.7 1.045381
+5   64.0  61.7 1.037277
+6   67.5  62.2 1.085209
 ```
 
 Note that you should take care to run SLURM scripts using the same version of openmpi
@@ -51,6 +80,7 @@ that you used while compiling Rmpi. Equally note that versions available will va
 across the clusters.
 
 ### The example
+
 This example shows off `doMPI`'s extension to R's `foreach` function, which
 can divide up a repeated function and avoids using costly `for` loops. By using
 `%dopar%` as our operator and invoking Rscript using `srun`, we ensure that the
