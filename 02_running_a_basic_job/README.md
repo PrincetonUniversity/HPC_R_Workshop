@@ -12,9 +12,7 @@ Rscript myscript.R
 ```
 
 However, if you do that on a scheduled cluster, you will be running 
-on the head node and interfering with other people's work, compilations,
-and file transfers. So instead this job must be flagged to the scheduler's
-attention.
+on the login node and interfering with the work of others (e.g., code building, file transfers). So instead all production jobs must be submitted to the Slurm job scheduler.
 
 ## Anatomy of a SLURM Script
 
