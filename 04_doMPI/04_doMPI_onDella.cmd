@@ -8,9 +8,9 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 # This is a somewhat inane setup, as it specifies 
-# two nodes and four processes between them. But it 
-# serves to demonstrate that MPI can work beyond the boundaries
-# of nodes.
+# two nodes and four processes between them. In general,
+# one allocates all of the CPU-cores on a node before requesting
+# multiple nodes.
 
 # If your processes are memory light, you can just specify
 # -ntasks for total number of tasks, and the scheduler will slot
