@@ -1,8 +1,7 @@
 # Rmpi and doMPI
 
 ### Rmpi
-Rmpi is a powerful wrapper that allows R to make calls using the
-MPI (Message Passing Interface), which is an API that lets
+Rmpi is a powerful wrapper that allows R to make calls using MPI (Message Passing Interface), which is an API that lets
 processes running on different processors (and even different nodes)
 communicate with one another.
 
