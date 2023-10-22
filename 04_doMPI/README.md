@@ -1,6 +1,6 @@
 # Rmpi and doMPI
 
-## Rmpi
+### Rmpi
 Rmpi is a powerful wrapper that allows R to make calls using the
 MPI (Message Passing Interface), which is an API that lets
 processes running on different processors (and even different nodes)
@@ -16,13 +16,13 @@ works in the first place.
 Many R wrappers exist to bridge this gap, and this example uses one:
 do MPI.
 
-## Installing Rmpi and doMPI
+### Installing Rmpi and doMPI
 
 Getting Rmpi installed can be a minor but not severe challenge. Generally
 you will need to do two things: 1) module load an updated compiler (as a suggestion)
 and 2) configure your environment to point to the server's OpenMPI install. Here is the installation procedure:
 
-### Della
+#### Della
 
 ```shell
 $ module load openmpi/gcc/4.1.2
@@ -37,7 +37,7 @@ If you are using Rmpi on Della and you find that jobs hang then add this line to
 Rmpi::mpi.quit()
 ```
 
-### Adroit
+#### Adroit
 
 ```shell
 $ module load openmpi/gcc/4.1.0
@@ -50,7 +50,7 @@ Note that you should take care to run SLURM scripts using the same version of op
 that you used while compiling Rmpi. Equally note that versions available will vary slightly
 across the clusters.
 
-## The example
+### The example
 This example shows off `doMPI`'s extension to R's `foreach` function, which
 can divide up a repeated function and avoids using costly `for` loops. By using
 `%dopar%` as our operator and invoking Rscript using `srun`, we ensure that the
