@@ -1,4 +1,4 @@
-# Get the $SLURM_JOB_ID variable from the environment created by SLURM
+# Get the $SLURM_JOB_ID variable from the environment created by Slurm
 job_id <- Sys.getenv('SLURM_ARRAY_JOB_ID')
 task_id <- Sys.getenv('SLURM_ARRAY_TASK_ID')
 
