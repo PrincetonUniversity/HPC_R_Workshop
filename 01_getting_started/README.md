@@ -25,4 +25,4 @@ See a comprehensive guide on using the [Research Computing clusters](https://res
 
 ### Installing Packages and accessing R
 
-The details of installing R packages can be found on our [R/RStudio knowledge base page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
+The details of installing R packages can be found on our [R and RStudio knowledge base page](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio).
