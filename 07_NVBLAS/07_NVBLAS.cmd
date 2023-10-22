@@ -14,8 +14,8 @@ export MKL_INTERFACE_LAYER=GNU,LP64
 export MKL_THREADING_LAYER=GNU
 
 # CUDA config
-# - Set the path to your nvblas file
-export NVBLAS_CONFIG_FILE=$HOME/nvblas.conf
+# Set the path to your nvblas file
+export NVBLAS_CONFIG_FILE=$(pwd)/nvblas.conf
 
 # Preload the path to libnvblas.so, no need for the MKL preload
 # since nvblas.conf handles that for us.
