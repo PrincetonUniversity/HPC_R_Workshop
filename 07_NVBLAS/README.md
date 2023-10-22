@@ -1,9 +1,9 @@
 # Using R with NVBLAS
 
-## When to use NVBLAS
+### When to use NVBLAS
 
 This takes a bit more setup, and it is probably only worth it
-if you are doing heavy matrix or vector operations. Then the GPU really,
+if you are doing heavy matrix operations. Then the GPU really,
 really shines. 
 
 There are packages that use CUDA to handle matrices and vectors 
@@ -18,9 +18,9 @@ It is worth noting that the NVBLAS is slower at non-matrix operations
 than Intel MKL, so this is also a sometimes fix.
 
 
-## Setup
+### Setup
 
-By default, the SLURM script for this example looks for a file called `nvblas.conf`
+By default, the Slurm script for this example looks for a file called `nvblas.conf`
 located in your home directory. I have included a sample file with comments for your
 use.
 
@@ -32,6 +32,5 @@ Here are the commands you need to run to launch the job:
 
 ```
 $ cd HPC_R_Workshop/07_NVBLAS
-$ cp nvblas.conf ~
 $ sbatch 07_NVBLAS.cmd
 ```
