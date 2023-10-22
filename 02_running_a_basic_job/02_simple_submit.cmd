@@ -7,4 +7,5 @@
 #SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
+module purge
 Rscript Hello.R
