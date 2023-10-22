@@ -8,4 +8,5 @@
 #SBATCH --array=1-3              # job array with index values 1, 2, 3
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
+module purge
 Rscript 03_iris.R $SLURM_ARRAY_TASK_ID
