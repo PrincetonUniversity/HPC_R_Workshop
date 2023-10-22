@@ -8,16 +8,16 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 # This is a somewhat inane setup, as it specifies 
-# two nodes and four processes between them. But it 
-# serves to demonstrate that MPI can work beyond the boundaries
-# of nodes.
+# two nodes and only four processes between them. In general,
+# one allocates all of the CPU-cores on a node before requesting
+# multiple nodes.
 
 # If your processes are memory light, you can just specify
 # -ntasks for total number of tasks, and the scheduler will slot
 # you in wherever it has room. Note though there is not a shared pool of 
 # memory bridging the nodes.
 
-module load openmpi/gcc/4.1.0
+module load openmpi/gcc/4.1.2
 
 # srun passes parameters that Rmpi uses to see the processes that 
 # have been started for it.
