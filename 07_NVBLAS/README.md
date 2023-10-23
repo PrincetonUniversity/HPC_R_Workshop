@@ -11,7 +11,7 @@ with the GPU directly, but they are in a sufficient state of flux
 that all operations aren't supported or they use the OpenCL interface
 and have much worse performance than CUDA native.
 
-The other advantage of using NVBLAS is that you can just write R. No
+The other advantage of using [NVBLAS](https://docs.nvidia.com/cuda/nvblas/) is that you can just write R. No
 packages, nothing special, just do your calls as you normally would.
 
 It is worth noting that the NVBLAS is slower at non-matrix operations
