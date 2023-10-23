@@ -12,7 +12,7 @@ one might parallelize code.
 ### Useful Links
 
 [ORNL Training Archive](https://docs.olcf.ornl.gov/training/training_archive.html) - See "Using R on HPC Clusters" from August 2022.
-
+[CRAN High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)
 ### Getting Started
 
 Research Computing offers this knowledge base page: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)
