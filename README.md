@@ -16,7 +16,7 @@ one might parallelize code.
 
 ### Getting Started
 
-Research Computing offers this knowledge base page: [https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio)
+See our [R and RStudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio) knowledge base webpage for getting started with the Research Computing clusters.
 
 ### Authorship
 
