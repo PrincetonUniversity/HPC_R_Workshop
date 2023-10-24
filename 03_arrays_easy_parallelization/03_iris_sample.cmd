@@ -9,4 +9,6 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 module purge
+module load R/4.3.0
+
 Rscript 03_iris.R $SLURM_ARRAY_TASK_ID
