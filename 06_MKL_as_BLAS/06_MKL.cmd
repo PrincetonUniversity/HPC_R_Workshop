@@ -7,6 +7,9 @@
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=all          # send email on job start, end and fault
 
+module purge
+module load R/4.3.0
+
 # This sets the intel-mkl to use the GNU interface, which 
 # is more compatible with R
 export  MKL_INTERFACE_LAYER=GNU,LP64
