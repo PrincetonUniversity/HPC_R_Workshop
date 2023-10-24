@@ -8,4 +8,7 @@
 #SBATCH --mail-type=all          # send email on job start, end and fault
 #SBATCH --mail-user=<YourNetID>@princeton.edu
 
+module purge
+module load R/4.3.0
+
 Rscript test.R
