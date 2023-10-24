@@ -8,4 +8,6 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 module purge
+module load R/4.3.0
+
 Rscript Hello.R
