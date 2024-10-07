@@ -9,7 +9,7 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 module purge
-module load R/4.3.0
+module load R/4.4.0  # R/4.4.1 on della (R/4.4.0 on adroit)
 
 # Standard MKL configuration for R and OpenMP threading
 module load intel-mkl/2021.1.1
