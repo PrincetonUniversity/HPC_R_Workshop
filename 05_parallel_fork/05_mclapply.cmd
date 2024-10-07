@@ -8,6 +8,6 @@
 #SBATCH --mail-type=all          # send email on job start, end and fail
 
 module purge
-module load R/4.3.0
+module load R/4.4.0  # R/4.4.1 on della (R/4.4.0 on adroit)
 
 srun Rscript 05_mclapply.R
