@@ -8,12 +8,12 @@
 #SBATCH --mail-type=all          # send email on job start, end and fault
 
 module purge
-module load R/4.3.0
+module load R/4.4.0  # R/4.4.1 on della (R/4.4.0 on adroit)
 
 # This sets the intel-mkl to use the GNU interface, which 
 # is more compatible with R
 export  MKL_INTERFACE_LAYER=GNU,LP64
 export  MKL_THREADING_LAYER=GNU
 
-module load intel-mkl/2019.5/5/64
+module load intel-mkl/2020.1
 LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_rt.so srun Rscript test.R
