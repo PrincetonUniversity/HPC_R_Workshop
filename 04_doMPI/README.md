@@ -23,8 +23,8 @@ you will need to do two things: 1) load an MPI library module and 2) set an envi
 #### Della
 
 ```shell
-$ module load openmpi/gcc/4.1.0
-$ export MPI_ROOT=/usr/local/openmpi/4.1.0/gcc
+$ module load openmpi/gcc/4.1.2
+$ export MPI_ROOT=/usr/local/openmpi/4.1.2/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 ```
@@ -38,8 +38,8 @@ Rmpi::mpi.quit()
 #### Adroit
 
 ```shell
-$ module load openmpi/gcc/4.1.0
-$ export MPI_ROOT=/usr/local/openmpi/4.1.0/gcc
+$ module load openmpi/gcc/4.1.2
+$ export MPI_ROOT=/usr/local/openmpi/4.1.2/gcc
 $ R
 > install.packages(c('doMPI', 'HistData'), repo='https://cloud.r-project.org/')
 > q()
