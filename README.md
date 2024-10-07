@@ -13,6 +13,7 @@ one might parallelize code.
 
 [ORNL Training Archive](https://docs.olcf.ornl.gov/training/training_archive.html) - See "Using R on HPC Clusters" from August 2022.  
 [CRAN High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)  
+[R User Group at Princeton](https://ddss.princeton.edu/events-and-workshops)  
 
 ### Getting Started
 
