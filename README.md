@@ -19,6 +19,10 @@ one might parallelize code.
 
 See our [R and RStudio](https://researchcomputing.princeton.edu/support/knowledge-base/rrstudio) knowledge base for getting started with the Research Computing clusters.
 
+## Getting Help
+
+If you encounter any difficulties with this material then please send an email to <a href="mailto:cses@princeton.edu">cses@princeton.edu</a> or attend a <a href="https://researchcomputing.princeton.edu/education/help-sessions">help session</a>.
+
 ### Authorship
 
 Ths guide was created by Ben Hicks and Bill Guthe with contributions by Jonathan Halverson.
