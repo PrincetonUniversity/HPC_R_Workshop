@@ -17,7 +17,8 @@
 # you in wherever it has room. Note though there is not a shared pool of 
 # memory bridging the nodes.
 
-module load R/4.4.0
+module purge
+module load R/4.4.1
 module load openmpi/gcc/4.1.2
 
 # srun passes parameters that Rmpi uses to see the processes that 
