@@ -24,6 +24,7 @@ you will need to do two things: 1) load an MPI library module and 2) set an envi
 
 ```shell
 $ ssh <YourNetID>@della9.princeton.edu
+$ module load R/4.4.2
 $ module load openmpi/gcc/4.1.6
 $ export MPI_ROOT=/usr/local/openmpi/4.1.6/gcc
 $ R
@@ -40,6 +41,7 @@ Rmpi::mpi.quit()
 
 ```shell
 $ ssh <YourNetID>@dadroit.princeton.edu
+$ module load R/4.4.1
 $ module load openmpi/gcc/4.1.2
 $ export MPI_ROOT=/usr/local/openmpi/4.1.2/gcc
 $ R
