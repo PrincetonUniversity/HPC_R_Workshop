@@ -8,7 +8,7 @@
 #SBATCH --mail-type=all          # send email on job start, end and fault
 
 module purge
-module load R/4.4.0  # R/4.4.1 on della (R/4.4.0 on adroit)
+module load R/4.4.1  # R/4.4.2 on della (R/4.4.1 on adroit)
 
 # This sets the intel-mkl to use the GNU interface, which 
 # is more compatible with R
