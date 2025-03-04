@@ -32,5 +32,6 @@ Here are the commands you need to run to launch the job:
 
 ```
 $ cd HPC_R_Workshop/07_NVBLAS
+$ cp nvblas.conf ~/
 $ sbatch 07_NVBLAS.cmd
 ```
