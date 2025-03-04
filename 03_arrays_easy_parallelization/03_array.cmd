@@ -9,6 +9,6 @@
 #SBATCH --mail-type=all          # send email on start, end and fail
 
 module purge
-module load R/4.4.0  # R/4.4.1 on della (R/4.4.0 on adroit)
+module load R/4.4.1  # R/4.4.2 on della (R/4.4.1 on adroit)
 
 Rscript array.R
