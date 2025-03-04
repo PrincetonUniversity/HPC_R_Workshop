@@ -21,7 +21,7 @@ than Intel MKL, so this is also a sometimes fix.
 ### Setup
 
 By default, the Slurm script for this example looks for a file called `nvblas.conf`
-located in your home directory. I have included a sample file with comments for your
+located in your home directory. A sample file is included with comments for your
 use.
 
 Just copy it to your home directory and you're good to go. No libraries to install
