@@ -22,4 +22,4 @@ export NVBLAS_CONFIG_FILE=$(pwd)/nvblas.conf
 
 # Preload the path to libnvblas.so, no need for the MKL preload
 # since nvblas.conf handles that for us.
-LD_PRELOAD="/usr/lib64/libnvblas.so" Rscript test.R
+LD_PRELOAD="/usr/local/cuda-13.0/targets/x86_64-linux/lib/libnvblas.so.13.0.0.19" Rscript test.R
