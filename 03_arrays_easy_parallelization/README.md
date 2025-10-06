@@ -49,23 +49,17 @@ The R script `03_array.cmd` stores the value of the enviroment variable `SLURM_A
 task_id <- Sys.getenv('SLURM_ARRAY_TASK_ID')
 ```
 
-#### Passing the Array Index as a Command Line Argument
+#### Job Arrays as a Divide and Conquer Solution
 
 You can also use the array ID to separate out or subset in other ways. `03_iris_example.cmd` does just that,
-using a simple set of `if` statements to subset a data frame and process a selected portion.
+using a simple set of `if` statements to subset a dataframe and process a selected portion.
 
-In the Slurm script:
-
-```
-Rscript 03_iris.R $SLURM_ARRAY_TASK_ID
-```
-
-The R script stores the array task ID as `start_index`:
+Run the commands below to submit the job:
 
 ```
-start_index <- commandArgs(trailingOnly = TRUE)
+$ cat 03_iris.R
+$ cat 03_iris_example.cmd
+$ sbatch 03_iris_example.cmd
 ```
-
-
 
 For more on job arrays see our [Slurm webpage](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays).
