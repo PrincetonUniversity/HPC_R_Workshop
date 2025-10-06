@@ -8,6 +8,8 @@
 #SBATCH --array=0-5              # job array with index values 0, 1, 2, 3, 4, 5
 #SBATCH --mail-type=all          # receive email on start, end, and fail
 
+printenv | grep -i slurm
+
 module purge
 module load R/4.5.1
 
