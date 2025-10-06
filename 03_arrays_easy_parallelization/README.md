@@ -22,25 +22,28 @@ If you requested a Slurm allocation of 5 array jobs as follows (`--array=1,100,2
 , you could then count on getting the
 arguments 1,100,200,300,400 in your slurm script as an environment variable:
 
-In your Slurm script:
-
-```
-$ cat 03_iris.R
-$ sbatch 03_iris_sample.cmd
-```
-
 ```shell
 Rscript process_df.R $SLURM_ARRAY_TASK_ID
 ```
 Then use those different numbers to subset your data for processing.
 
-The Slurm script (`03_array.cmd`):
+Run the commands below to submit the example job:
+
+```
+$ git clone https://github.com/PrincetonUniversity/HPC_R_Workshop
+$ cd HPC_R_Workshop/03_arrays_easy_parallelization
+$ cat array.R
+$ cat 03_array.cmd
+$ sbatch 03_array.cmd
+```
+
+The Slurm script `03_array.cmd` uses:
 
 ```
 Rscript array.R
 ```
 
-The R script stores the value of the enviroment variable `SLURM_ARRAY_TASK_ID` in `task_id`:
+The R script `03_array.cmd` stores the value of the enviroment variable `SLURM_ARRAY_TASK_ID` in `task_id`:
 
 ```
 task_id <- Sys.getenv('SLURM_ARRAY_TASK_ID')
@@ -63,12 +66,6 @@ The R script stores the array task ID as `start_index`:
 start_index <- commandArgs(trailingOnly = TRUE)
 ```
 
-### Commands to run on Adroit
 
-```
-$ git clone https://github.com/PrincetonUniversity/HPC_R_Workshop
-$ cd HPC_R_Workshop/03_arrays_easy_parallelization
-$ sbatch 03_array.cmd
-```
 
 For more on job arrays see our [Slurm webpage](https://researchcomputing.princeton.edu/support/knowledge-base/slurm#arrays).
