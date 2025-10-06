@@ -37,6 +37,7 @@ You can see the basic setup, which loads the module for intel-mkl and
 then preloads the approprate linked library when invoking Rscript.
 
 ```
+$ cd HPC_R_Workshop/06_MKL_as_BLAS
 $ cat test.R
 $ cat 06_MKL.cmd
 $ sbatch 06_MKL.cmd
