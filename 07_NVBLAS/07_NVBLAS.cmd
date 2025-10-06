@@ -6,13 +6,13 @@
 #SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --mem=4G                 # total memory per node (4G per cpu-core is default)
 #SBATCH --time=00:00:30          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=all          # send email on job start, end and fail
+#SBATCH --mail-type=all          # receive email on job start, end, and fail
 
 module purge
-module load R/4.4.1  # R/4.4.2 on della (R/4.4.1 on adroit)
+module load R/4.5.1
 
 # Standard MKL configuration for R and OpenMP threading
-module load intel-mkl/2021.1.1
+module load intel-mkl/2024.2
 export MKL_INTERFACE_LAYER=GNU,LP64
 export MKL_THREADING_LAYER=GNU
 
