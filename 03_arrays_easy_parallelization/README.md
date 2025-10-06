@@ -22,12 +22,7 @@ If you requested a Slurm allocation of 5 array jobs as follows (`--array=1,100,2
 , you could then count on getting the
 arguments 1,100,200,300,400 in your slurm script as an environment variable:
 
-```shell
-Rscript process_df.R $SLURM_ARRAY_TASK_ID
-```
-Then use those different numbers to subset your data for processing.
-
-Run the commands below to submit the example job:
+Run the commands below to see how job arrays work:
 
 ```
 $ git clone https://github.com/PrincetonUniversity/HPC_R_Workshop
