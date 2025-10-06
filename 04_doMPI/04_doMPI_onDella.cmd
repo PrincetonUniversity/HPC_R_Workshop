@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem-per-cpu=4G         # memory per cpu-core (4G per cpu-core is default)
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
-#SBATCH --mail-type=all          # send email on job start, end and fail
+#SBATCH --mail-type=all          # receive email on job start, end, and fail
 
 # This is a somewhat inane setup, as it specifies 
 # two nodes and four processes between them. In general,
@@ -18,7 +18,7 @@
 # memory bridging the nodes.
 
 module purge
-module load R/4.4.2
+module load R/4.5.1
 module load openmpi/gcc/4.1.6
 
 # srun passes parameters that Rmpi uses to see the processes that 
