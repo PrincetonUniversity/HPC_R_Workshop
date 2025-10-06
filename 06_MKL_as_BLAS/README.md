@@ -42,7 +42,14 @@ $ cat 06_MKL.cmd
 $ sbatch 06_MKL.cmd
 ```
 
-That's it. If you run the two scripts, you will get improved performance.
+Compare the timings against the naive library:
+
+```
+$ cat 06_openblas.cmd
+$ sbatch 06_openblas.cmd
+```
+
+That's it. If you run the two scripts, you will get improved performance with MKL.
 They are fairly short, but you can see that functions that can use a threading BLAS get much improved performance.
 
 The one caveat (and what makes this a sometimes solution), is that
