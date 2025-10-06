@@ -23,7 +23,7 @@ see the BLAS library used by R by running `sessionInfo()`. On the clusters
 we find:
 
 ```
-BLAS/LAPACK: /usr/lib64/R/lib/libRblas.so
+BLAS/LAPACK: FlexiBLAS OPENBLAS-OPENMP;  LAPACK version 3.9.0
 ```
 
 ## Examples
