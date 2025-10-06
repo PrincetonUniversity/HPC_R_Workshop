@@ -24,12 +24,44 @@ arguments 1,100,200,300,400 in your slurm script as an environment variable:
 
 In your Slurm script:
 
+```
+$ cat 03_iris.R
+$ sbatch 03_iris_sample.cmd
+```
+
 ```shell
 Rscript process_df.R $SLURM_ARRAY_TASK_ID
 ```
 Then use those different numbers to subset your data for processing.
+
+The Slurm script (`03_array.cmd`):
+
+```
+Rscript array.R
+```
+
+The R script stores the value of the enviroment variable `SLURM_ARRAY_TASK_ID` in `task_id`:
+
+```
+task_id <- Sys.getenv('SLURM_ARRAY_TASK_ID')
+```
+
+#### Passing the Array Index as a Command Line Argument
+
 You can also use the array ID to separate out or subset in other ways. `03_iris_example.cmd` does just that,
 using a simple set of `if` statements to subset a data frame and process a selected portion.
+
+In the Slurm script:
+
+```
+Rscript 03_iris.R $SLURM_ARRAY_TASK_ID
+```
+
+The R script stores the array task ID as `start_index`:
+
+```
+start_index <- commandArgs(trailingOnly = TRUE)
+```
 
 ### Commands to run on Adroit
 
